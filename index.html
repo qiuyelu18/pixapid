@@ -245,6 +245,31 @@
                 max-height: 60vh;
             }
         }
+        
+        /* 醒目提示文字 */
+        .alert-warning-custom {
+            background-color: #fff4e5;
+            color: #d46b08;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 1px dashed #ffbb96;
+            margin: 15px auto;
+            font-weight: bold;
+            position: relative;
+            animation: attention 2s infinite;
+            text-align: center;
+        }
+        
+        @keyframes attention {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        .alert-warning-custom i {
+            margin-right: 5px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 
@@ -281,6 +306,13 @@
                 </li>
                 <li>用完务必<strong>&nbsp退出登录&nbsp</strong>，换回自己的ID</li>
             </ol>
+            
+            <!-- 验证码提示 -->
+            <div class="alert-warning-custom">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                弹出要求验证码就直接换其他ID！
+            </div>
+            
             <div class="col-auto text-center w-100">
                 <div class="collapse-panel">
                     <div class="collapse-header" id="tutorialHeader">
